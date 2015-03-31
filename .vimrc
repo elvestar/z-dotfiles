@@ -40,6 +40,9 @@ Plugin 'vim-scripts/a.vim'
 
 "" Python
 Plugin 'klen/python-mode'
+let g:pymode_lint_signs = 0
+let g:pymode_lint_cwindow = 1
+
 Plugin 'hynek/vim-python-pep8-indent'
 
 " File jump in django
@@ -111,8 +114,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
-
 """ Basic
 syntax on
 colorscheme desert
@@ -129,7 +130,6 @@ set colorcolumn=100
 set foldmethod=marker
 set pastetoggle=<F8>
 set ignorecase
-
 
 " Not scroll to the top or bottom
 set scrolloff=3
@@ -250,7 +250,6 @@ nmap <leader>. :bp<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
 inoremap <leader>t <c-o>:NERDTreeToggle<cr>
 let g:NERDTreeIgnore = ['tags', '\.swp$', '\.o', '\.log', '\~$']
-
 
 " Plugin: NERD_commenter.vim
 let g:NERDSpaceDelims = 1
@@ -460,7 +459,6 @@ nmap <leader>rf <c-o>:RivHelpFile<cr>
 imap <leader>h1 <c-o>:RivTitle1<cr>
 imap <leader>h2 <c-o>:RivTitle2<cr>
 imap <leader>h3 <c-o>:RivTitle3<cr>
-
 
 augroup filetype
     autocmd! BufRead,BufNewFile BUILD set filetype=blade
